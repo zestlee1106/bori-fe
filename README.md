@@ -5,7 +5,7 @@
 - FE Framework
   - Next
 - package manager
-  - pnpm
+  - yarn
 - node version
   - 18.20.3
 - UI library
@@ -18,11 +18,11 @@
 ```bash
 # pnpm
 
-pnpm install
+yarn install
 ```
 
 ## Run Development Server
 
 ```bash
-pnpm dev
+yarn dev
 ```
