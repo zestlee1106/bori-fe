@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from './components/Header'
+import Nav from './components/Nav'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,6 +21,7 @@ const RootLayout = ({
       <body className={`${inter.className} flex items-center justify-center bg-black`}>
         <Header />
         <div className="max-w-screen min-w-screen min-h-screen bg-white w-full">{children}</div>
+        <Nav />
       </body>
     </html>
   )
