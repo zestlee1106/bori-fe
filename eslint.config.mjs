@@ -26,7 +26,7 @@ export default [
       '@typescript-eslint/no-unused-vars': 'off',
       'no-console': 'warn',
       'global-require': 'off',
-      'react/react-in-jsx-scope': 'off'
+      'react/react-in-jsx-scope': 'off',
     },
   },
 ]

@@ -16,7 +16,7 @@
 ### Install package
 
 ```bash
-# pnpm
+# yarn
 
 yarn install
 ```
