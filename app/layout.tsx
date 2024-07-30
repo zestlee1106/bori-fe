@@ -9,16 +9,18 @@ export const metadata: Metadata = {
   description: '보청기 판매점을 보여줘요',
 }
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode
-}>) {
+}>) => {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div>{children}</div>
+      <body className={`${inter.className} flex items-center justify-center bg-black`}>
+        <div className="max-w-screen min-w-screen min-h-screen bg-white">{children}</div>
       </body>
     </html>
   )
 }
+
+export default RootLayout
