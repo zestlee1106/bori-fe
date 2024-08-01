@@ -20,7 +20,7 @@ const RootLayout = ({
     <html lang="en">
       <body className={`${inter.className} flex items-center justify-center bg-black text-black`}>
         <Header />
-        <div className="max-w-screen min-w-screen min-h-screen bg-white w-full pt-header">{children}</div>
+        <div className="max-w-screen min-w-screen min-h-screen bg-white w-full pt-header flex flex-col">{children}</div>
         <Nav />
       </body>
     </html>
