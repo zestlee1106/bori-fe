@@ -1,5 +1,7 @@
 import type { Config } from 'tailwindcss'
 
+const HEADER_HEIGHT = '50px'
+
 const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -14,6 +16,15 @@ const config: Config = {
       },
       maxWidth: {
         screen: '430px',
+      },
+      height: {
+        header: HEADER_HEIGHT,
+      },
+      padding: {
+        header: HEADER_HEIGHT,
+      },
+      margin: {
+        header: HEADER_HEIGHT,
       },
     },
   },
