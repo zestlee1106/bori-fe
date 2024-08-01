@@ -3,6 +3,8 @@
 import { usePathname } from 'next/navigation'
 import React from 'react'
 import classnames from 'classnames'
+import Image from 'next/image'
+import Logo from '@/public/icon/logo.png'
 
 interface HeaderState {
   showLogo: boolean
@@ -39,7 +41,7 @@ const Header = () => {
         static: position === 'static',
       })}
     >
-      {showLogo && <img className="w-[50px] h-[50px]" src="favicon.ico"></img>}
+      {showLogo && <Image className="w-[50px] h-[50px]" src={Logo} alt="logo" />}
       {showBackButton && <div>&lt;</div>}
     </header>
   )
