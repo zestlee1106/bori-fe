@@ -1,3 +1,9 @@
+/**
+ * @deprecated
+ * Header 를 클라이언트에서 관리함에 따라 필요없어진 스토어
+ * 추후 참고용으로 일단은 남긴다
+ */
+
 import { create } from 'zustand'
 
 type BackgroundColor = 'transparent' | 'white' | 'black'
