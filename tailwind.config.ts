@@ -26,6 +26,9 @@ const config: Config = {
       margin: {
         header: HEADER_HEIGHT,
       },
+      colors: {
+        primary: '#84A93D',
+      },
     },
   },
   plugins: [],
