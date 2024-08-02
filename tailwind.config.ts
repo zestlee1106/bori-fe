@@ -30,6 +30,9 @@ const config: Config = {
         primary: '#84A93D',
         primaryLight: 'rgba(132, 169, 61, 0.2)', // 20% 투명도 적용된 primary 색상
       },
+      boxShadow: {
+        't-md': '0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+      },
     },
   },
   plugins: [],
