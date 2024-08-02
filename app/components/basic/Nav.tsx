@@ -28,7 +28,7 @@ const Nav = () => {
   return (
     showNav &&
     icons.length > 0 && (
-      <div className="fixed bottom-0 w-full max-w-screen h-[78px] items-center flex justify-center shadow-t-md rounded-r-[20px] rounded-l-[20px] bg-white">
+      <div className="fixed bottom-0 w-full max-w-screen h-[78px] items-center flex justify-center shadow-t-md rounded-tr-[20px] rounded-tl-[20px] bg-white">
         {icons.map((icon) => (
           <React.Fragment key={icon}>{icon === 'home' && <div>{icon}</div>}</React.Fragment>
         ))}

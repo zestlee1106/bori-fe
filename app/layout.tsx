@@ -4,6 +4,7 @@ import './globals.css'
 import Header from './components/basic/Header'
 import Nav from './components/basic/Nav'
 import Background from './components/basic/Background'
+import localFont from 'next/font/local'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,6 +13,20 @@ export const metadata: Metadata = {
   description: '보청기 판매점을 보여줘요',
 }
 
+const pretendard = localFont({
+  src: [
+    {
+      path: '../public/font/Pretendard-Regular.woff',
+      weight: '400',
+    },
+    {
+      path: '../public/font/Pretendard-Bold.woff',
+      weight: '700',
+    },
+  ],
+  variable: '--font-pretendard',
+})
+
 const RootLayout = ({
   children,
 }: Readonly<{
@@ -19,7 +34,9 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex items-center justify-center bg-black text-black`}>
+      <body
+        className={`${pretendard.variable} ${inter.className} flex items-center justify-center bg-black text-black font-pretendard`}
+      >
         <Header />
         <div className="max-w-screen min-w-screen min-h-screen bg-white w-full flex flex-col">
           <Background>{children}</Background>
