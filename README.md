@@ -10,10 +10,12 @@
   - 18.20.3
 - UI library
   - tailwind
+- Store
+  - zustand
 
 ## Setup
 
-### Install package
+### Install Package
 
 ```bash
 # yarn
@@ -21,7 +23,7 @@
 yarn install
 ```
 
-## Run Development Server
+### Run Development Server
 
 ```bash
 yarn dev
