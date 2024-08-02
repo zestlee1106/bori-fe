@@ -2,6 +2,8 @@
 
 import { usePathname } from 'next/navigation'
 import React from 'react'
+import HomeLogo from '@/public/icon/home.svg'
+import Link from 'next/link'
 
 type NavIcon = 'home' | 'my'
 
@@ -28,9 +30,18 @@ const Nav = () => {
   return (
     showNav &&
     icons.length > 0 && (
-      <div className="fixed bottom-0 w-full max-w-screen h-[78px] items-center flex justify-center shadow-t-md rounded-tr-[20px] rounded-tl-[20px] bg-white">
+      <div className="fixed bottom-0 w-full max-w-screen h-[78px] items-center flex justify-center shadow-t-md rounded-tr-[20px] rounded-tl-[20px] bg-white pt-[16px]">
         {icons.map((icon) => (
-          <React.Fragment key={icon}>{icon === 'home' && <div>{icon}</div>}</React.Fragment>
+          <React.Fragment key={icon}>
+            {icon === 'home' && (
+              <Link href="/">
+                <div className="flex flex-col items-center">
+                  <HomeLogo />
+                  <div className="p-[6px] font-bold text-primary">홈</div>
+                </div>
+              </Link>
+            )}
+          </React.Fragment>
         ))}
       </div>
     )
