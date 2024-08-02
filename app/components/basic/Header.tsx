@@ -7,25 +7,27 @@ import Image from 'next/image'
 import Logo from '@/public/icon/logo.png'
 
 interface HeaderState {
-  showLogo: boolean
   backgroundColor: 'transparent' | 'white' | 'black'
-  showBackButton: boolean
   position: 'fixed' | 'absolute'
+  left: 'logo' | 'back'
+  center: string | null
+  right: 'hamburger' | null
 }
 
 const HEADER_CONFIG: Record<string, HeaderState> = {
   '/': {
-    showLogo: true,
     backgroundColor: 'transparent',
-    showBackButton: false,
     position: 'absolute',
+    left: 'logo',
+    center: null,
+    right: null,
   },
 }
 
 const Header = () => {
   const pathname = usePathname()
 
-  const { showLogo, backgroundColor, showBackButton, position } = HEADER_CONFIG[pathname] || {
+  const { left, center, right, backgroundColor, position } = HEADER_CONFIG[pathname] || {
     showLogo: true,
     backgroundColor: 'transparent',
     showBackButton: false,
@@ -41,8 +43,9 @@ const Header = () => {
         absolute: position === 'absolute',
       })}
     >
-      {showLogo && <Image className="w-[50px] h-[50px]" src={Logo} alt="logo" />}
-      {showBackButton && <div>&lt;</div>}
+      {left === 'logo' && <Image className="w-[50px] h-[50px]" src={Logo} alt="logo" />}
+      {left === 'back' && <div>&lt;</div>}
+      {center && <div>{center}</div>}
     </header>
   )
 }
