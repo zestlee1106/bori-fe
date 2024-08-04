@@ -15,6 +15,16 @@ const nextConfig = {
         hostname: 'picsum.photos',
         port: '',
       },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '3300',
+      },
+      {
+        protocol: 'http',
+        hostname: 'bori-fe.vercel.app',
+        port: '',
+      },
     ],
   },
 }
