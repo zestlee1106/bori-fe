@@ -30,13 +30,19 @@ const Nav = () => {
   return (
     showNav &&
     icons.length > 0 && (
-      <div className="fixed bottom-0 w-full max-w-screen h-[51px] items-center flex justify-center shadow-t-md rounded-tr-[20px] rounded-tl-[20px] bg-white font-bold">
+      <div
+        className="fixed bottom-0 w-full max-w-screen h-[51px] items-center flex justify-center rounded-tr-[20px] rounded-tl-[20px] bg-white font-bold"
+        style={{ boxShadow: '0px -4px 20px rgba(147, 156, 169, 0.2)' }}
+      >
         {icons.map((icon) => (
           <React.Fragment key={icon}>
             {icon === 'home' && (
               <Link href="/">
                 <div className="relative flex flex-col items-center w-[60px] h-[60px]">
-                  <div className="absolute -top-[24px] flex flex-col items-center bg-white rounded-full py-[9px] px-[19px] shadow-md">
+                  <div
+                    className="absolute -top-[24px] flex flex-col items-center bg-white rounded-full py-[9px] px-[19px]"
+                    style={{ boxShadow: '0px 4px 20px rgba(147, 156, 169, 0.2)' }}
+                  >
                     <HomeLogo />
                     <div className="font-bold text-primary text-[12px] pt-[4px]">홈</div>
                   </div>
