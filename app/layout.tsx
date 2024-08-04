@@ -20,8 +20,16 @@ const pretendard = localFont({
       weight: '400',
     },
     {
+      path: '../public/font/Pretendard-SemiBold.woff',
+      weight: '600',
+    },
+    {
       path: '../public/font/Pretendard-Bold.woff',
       weight: '700',
+    },
+    {
+      path: '../public/font/Pretendard-ExtraBold.woff',
+      weight: '800',
     },
   ],
   variable: '--font-pretendard',
