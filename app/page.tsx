@@ -4,8 +4,7 @@ import Image from 'next/image'
 // TODO: 응답 데이터로부터 가져오도록 수정
 const startColor = '#eec695'
 const endColor = '#ffffff'
-const fontColor = '#ff6600'
-const imageLink = 'https://picsum.photos/400/400'
+const imageLink = 'http://localhost:3300/icon/mock/house.png'
 
 const Home = () => {
   return (
@@ -29,8 +28,8 @@ const Home = () => {
                 <RightArrow width="4.91" height="8.49" fill="#767676" />
               </div>
             </div>
-            <div className="w-[121px] h-[68px] overflow-hidden absolute bottom-[21px] right-[17px]">
-              <Image src={imageLink} alt="banner" layout="fill" objectFit="cover" />
+            <div className="overflow-hidden absolute bottom-[21px] right-[28px] pl-[6px]">
+              <Image src={imageLink} alt="banner" width={99} height={68} objectFit="cover" />
             </div>
           </div>
         </div>
@@ -50,9 +49,8 @@ const Home = () => {
         <div className="rounded-[20px] relative drop-shadow-lg bg-GREEN-50 w-full h-[124px]">
           <div className="flex items-center pt-[31px] pl-[33px]">
             <div className="text-[22px] tracking-[-0.55px] leading-[34px] w-[143px]">
-              <span className="text-GREEN font-extrabold">지역별 판매점</span>
-              <br />
-              <div className="text-[18px] font-bold">검색하기</div>
+              <div className="text-GREEN font-extrabold">지역별 판매점</div>
+              <div className="text-[18px] font-bold pt-[2px]">검색하기</div>
             </div>
             <div className="pl-[7px]">
               <RightArrow width="6.14" height="10.61" fill="#2D5500" />
@@ -67,9 +65,8 @@ const Home = () => {
         <div className="rounded-[20px] relative drop-shadow-lg bg-GREEN-20 w-full h-[124px]">
           <div className="flex items-center pt-[31px] pl-[33px]">
             <div className="text-[22px] tracking-[-0.55px] leading-[34px] w-[143px]">
-              <span className="text-GREEN font-extrabold">브랜드 전문센터</span>
-              <br />
-              <div className="text-[18px] font-bold">검색하기</div>
+              <div className="text-GREEN font-extrabold">브랜드 전문센터</div>
+              <div className="text-[18px] font-bold pt-[2px]">검색하기</div>
             </div>
             <div className="pl-[7px]">
               <RightArrow width="6.14" height="10.61" fill="#2D5500" />
