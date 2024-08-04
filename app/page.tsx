@@ -26,7 +26,7 @@ const Home = () => {
             <div className="flex items-center pt-[8px] text-GRAY tracking-[-0.55px] leading-[30px] text-[14px] font-semibold">
               집 근처 보청기 판매점 찾는 방법
               <div className="pl-[6.75px]">
-                <RightArrow />
+                <RightArrow width="4.91" height="8.49" fill="#767676" />
               </div>
             </div>
             <div className="w-[121px] h-[68px] overflow-hidden absolute bottom-[21px] right-[17px]">
@@ -55,7 +55,7 @@ const Home = () => {
               <div className="text-[18px] font-bold">검색하기</div>
             </div>
             <div className="pl-[7px]">
-              <RightArrow />
+              <RightArrow width="6.14" height="10.61" fill="#2D5500" />
             </div>
           </div>
           <div className="absolute bottom-[13px] right-[23px]">
@@ -69,10 +69,10 @@ const Home = () => {
             <div className="text-[22px] tracking-[-0.55px] leading-[34px] w-[143px]">
               <span className="text-GREEN font-extrabold">브랜드 전문센터</span>
               <br />
-              <div className="font-semibold text-[18px] font-bold">검색하기</div>
+              <div className="text-[18px] font-bold">검색하기</div>
             </div>
             <div className="pl-[7px]">
-              <RightArrow />
+              <RightArrow width="6.14" height="10.61" fill="#2D5500" />
             </div>
           </div>
           <div className="absolute bottom-[13px] right-[23px]">
