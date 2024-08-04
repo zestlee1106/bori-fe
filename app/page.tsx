@@ -4,7 +4,7 @@ import Image from 'next/image'
 // TODO: 응답 데이터로부터 가져오도록 수정
 const startColor = '#eec695'
 const endColor = '#ffffff'
-const imageLink = 'http://localhost:3300/icon/mock/house.png'
+const imageLink = 'https://bori-fe.vercel.app/icon/mock/house.png'
 
 const Home = () => {
   return (
