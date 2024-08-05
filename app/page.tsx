@@ -1,16 +1,23 @@
 import RightArrow from '@/public/icon/right-arrow.svg'
 import Image from 'next/image'
 import Banner from './components/basic/Banner'
+import { getBanners } from '@/app/api/modules/banner'
 
-// TODO: 응답 데이터로부터 가져오도록 수정
-const startColor = '#eec695'
-const endColor = '#ffffff'
-const imageLink = 'https://bori-fe.vercel.app/icon/mock/house.png'
+const fetchData = async () => {
+  try {
+    const { banners } = await getBanners()
+    return banners
+  } catch (e) {
+    return []
+  }
+}
 
-const Home = () => {
+const Home = async () => {
+  const banners = await fetchData()
+
   return (
     <div>
-      <Banner />
+      <Banner banners={banners} />
 
       {/* 중간 텍스트 영역 */}
       <div className="h-[53px] mt-[25px] flex items-center">

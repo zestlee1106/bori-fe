@@ -3,7 +3,6 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import BannerSlide from '@/app/components/basic/BannerSlide'
-import { banners } from '@/public/constants/mock'
 import { Banner as BannerType } from '@/types/banner'
 import { Pagination } from 'swiper/modules'
 
@@ -11,9 +10,11 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import '@/app/styles/swiper-custom.css'
 
-const bannersData: BannerType[] = banners
+interface BannerProps {
+  banners: BannerType[]
+}
 
-const Banner = () => {
+const Banner = ({ banners }: BannerProps) => {
   return (
     <Swiper
       slidesPerView={1}
@@ -22,7 +23,7 @@ const Banner = () => {
       modules={[Pagination]}
       loop
     >
-      {bannersData.map((banner) => (
+      {banners.map((banner) => (
         <SwiperSlide key={`banner-${banner.order}`}>
           <BannerSlide
             startColor={`#${banner.backgroundColors[1]}`}
