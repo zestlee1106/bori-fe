@@ -3,7 +3,7 @@ export const banners = [
     order: 1,
     title: '우리 동네 보청기 판매점 정보를 다 모았어요',
     subTitle: '집 근처 보청기 판매점 찾는 방법',
-    imageUrl: 'http://localhost:3300/icon/mock/house.png',
+    imageUrl: 'https://bori-fe.vercel.app/icon/mock/house.png',
     linkUrl: '/',
     backgroundColors: ['FFFFFF', 'eec695'],
   },
