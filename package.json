@@ -4,12 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3300",
+    "dev:vercel": "BUILD_ENV=vercel next dev -p 3300",
     "build": "next build",
+    "build:vercel": "BUILD_ENV=vercel next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@svgr/webpack": "^8.1.0",
+    "dotenv": "^16.4.5",
     "eslint": "^9.8.0",
     "next": "14.2.5",
     "react": "^18",
