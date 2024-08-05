@@ -23,6 +23,9 @@ const nextConfig = {
       {
         hostname: 'bori-fe.vercel.app',
       },
+      {
+        hostname: 'images.unsplash.com',
+      },
     ],
   },
 }
