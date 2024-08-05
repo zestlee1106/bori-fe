@@ -5,15 +5,7 @@ export const banners = [
     subTitle: '집 근처 보청기 판매점 찾는 방법',
     imageUrl: 'http://localhost:3300/icon/mock/house.png',
     linkUrl: '/',
-    backgroundColors: ['FFFFFF', 'CAE3E2'],
-  },
-  {
-    order: 1,
-    title: '포낙보청기',
-    subTitle: '포낙보청기 홈페이지로 이동합니다',
-    imageUrl: 'https://images.unsplash.com/photo-1472066719480-ecc7314ed065',
-    linkUrl: 'https://www.phonak.com/ko-kr',
-    backgroundColors: ['FFFFFF', 'CAE3E2'],
+    backgroundColors: ['FFFFFF', 'eec695'],
   },
   {
     order: 2,
@@ -21,7 +13,7 @@ export const banners = [
     subTitle: '오티콘보청기 홈페이지로 이동합니다',
     imageUrl: 'https://images.unsplash.com/photo-1603336540535-c661f8f23fd5',
     linkUrl: 'https://oticonshop.com/',
-    backgroundColors: ['FFFFFF', 'EEC695'],
+    backgroundColors: ['FFFFFF', 'CAE3E2'],
   },
   {
     order: 3,
