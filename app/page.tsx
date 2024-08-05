@@ -6,6 +6,7 @@ import { getBanners } from '@/app/api/modules/banner'
 const fetchData = async () => {
   try {
     const { banners } = await getBanners()
+    console.log('🧡💛💙 영우의 로그 => banners', banners)
     return banners
   } catch (e) {
     return []
