@@ -1,5 +1,5 @@
 // api.js
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL
+const API_BASE_URL = process.env.API_URL || process.env.NEXT_PUBLIC_API_URL
 
 const request = async <T>(endpoint: string, options = {}): Promise<T> => {
   const url = `${API_BASE_URL}${endpoint}`
