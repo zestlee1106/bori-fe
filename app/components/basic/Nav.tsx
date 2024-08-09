@@ -44,7 +44,7 @@ const Nav = () => {
                     style={{ boxShadow: '0px 4px 20px rgba(147, 156, 169, 0.2)' }}
                   >
                     <HomeLogo />
-                    <div className="font-bold text-primary text-[12px] pt-[4px]">홈</div>
+                    <div className="font-bold text-GREEN_800 text-[12px] pt-[4px]">홈</div>
                   </div>
                 </div>
               </Link>
