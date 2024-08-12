@@ -18,6 +18,7 @@ const Banner = ({ banners }: BannerProps) => {
   return (
     <Swiper
       slidesPerView={1}
+      spaceBetween={24}
       className="drop-shadow-lg rounded-[20px]"
       pagination={{ clickable: true }}
       modules={[Pagination]}
