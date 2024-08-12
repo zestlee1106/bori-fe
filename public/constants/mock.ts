@@ -5,7 +5,7 @@ export const banners = [
     subTitle: '집 근처 보청기 판매점 찾는 방법',
     imageUrl: 'https://bori-fe.vercel.app/icon/mock/house.png',
     linkUrl: '/',
-    backgroundColors: ['FFFFFF', 'eec695'],
+    backgroundColors: ['FFF3E3', 'eec695'],
   },
   {
     order: 2,
