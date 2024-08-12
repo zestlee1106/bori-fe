@@ -5,13 +5,23 @@ import React from 'react'
 import classnames from 'classnames'
 import Image from 'next/image'
 import Logo from '@/public/icon/logo.png'
+import HomeIcon from '@/public/icon/home.svg'
+import LeftArrowIcon from '@/public/icon/left-arrow.svg'
 
 interface HeaderState {
   backgroundColor: 'transparent' | 'white' | 'black'
   position: 'fixed' | 'absolute'
   left: 'logo' | 'back'
-  center: string | null
-  right: 'hamburger' | null
+  center: string | React.JSX.Element | null
+  right: 'hamburger' | React.JSX.Element | null
+}
+
+const ShopTitle = () => {
+  return (
+    <div className="font-pretendard font-extrabold text-[22px]">
+      지역별 <span className="text-GREEN_800">보청기 판매점</span> 모음
+    </div>
+  )
 }
 
 const HEADER_CONFIG: Record<string, HeaderState> = {
@@ -21,6 +31,14 @@ const HEADER_CONFIG: Record<string, HeaderState> = {
     left: 'logo',
     center: null,
     right: null,
+  },
+
+  '/shop': {
+    backgroundColor: 'transparent',
+    position: 'fixed',
+    left: 'back',
+    center: <ShopTitle />,
+    right: <HomeIcon />,
   },
 }
 
@@ -43,9 +61,16 @@ const Header = () => {
         absolute: position === 'absolute',
       })}
     >
-      {left === 'logo' && <Image className="w-[50px] h-[50px]" src={Logo} alt="logo" />}
-      {left === 'back' && <div>&lt;</div>}
-      {center && <div>{center}</div>}
+      <div className="flex justify-between items-center w-full">
+        {left === 'logo' && <Image className="w-[50px] h-[50px]" src={Logo} alt="logo" />}
+        {left === 'back' && (
+          <div className="justify-start">
+            <LeftArrowIcon />
+          </div>
+        )}
+        {center && <div>{center}</div>}
+        {right && <div className="justify-end">{right}</div>}
+      </div>
     </header>
   )
 }
