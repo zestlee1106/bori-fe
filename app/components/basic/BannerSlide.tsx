@@ -15,7 +15,7 @@ const BannerSlide = ({ startColor, endColor, imageLink, title, subTitle }: Banne
     <div className="pt-[8px]">
       <div
         style={{
-          background: `linear-gradient(-59deg, ${startColor}, ${endColor})`,
+          background: `linear-gradient(-65deg, ${startColor}, ${endColor})`,
         }}
         className="rounded-[20px] relative"
       >
