@@ -2,6 +2,7 @@ import RightArrow from '@/public/icon/right-arrow.svg'
 import Image from 'next/image'
 import Banner from './components/basic/Banner'
 import { getBanners } from '@/app/api/modules/banner'
+import Link from 'next/link'
 
 const fetchData = async () => {
   try {
@@ -33,6 +34,7 @@ const Home = async () => {
           subTitle="검색하기"
           backgroundColor="bg-GREEN_400"
           iconSrc="/icon/map-search.png"
+          link="/shop"
         />
         <HomeCard title="브랜드 전문센터" subTitle="검색하기" backgroundColor="bg-GREEN_300" iconSrc="/icon/find.png" />
       </div>
@@ -45,23 +47,28 @@ interface HomeCardProps {
   subTitle: string
   backgroundColor: string
   iconSrc: string
+  link?: string
 }
 
-const HomeCard = ({ title, subTitle, backgroundColor, iconSrc }: HomeCardProps) => (
-  <div className={`rounded-[20px] relative drop-shadow-lg ${backgroundColor} w-full h-[124px]`}>
-    <div className="flex items-center pt-[31px] pl-[33px]">
-      <div className="text-[22px] tracking-[-0.55px] leading-[34px] w-[143px]">
-        <div className="text-GREEN_800 font-extrabold">{title}</div>
-        <div className="text-[18px] font-bold pt-[2px]">{subTitle}</div>
+const HomeCard = ({ title, subTitle, backgroundColor, iconSrc, link }: HomeCardProps) => {
+  const renderCardContent = (
+    <div className={`rounded-[20px] relative drop-shadow-lg ${backgroundColor} w-full h-[124px]`}>
+      <div className="flex items-center pt-[31px] pl-[33px]">
+        <div className="text-[22px] tracking-[-0.55px] leading-[34px] w-[143px]">
+          <div className="text-GREEN_800 font-extrabold">{title}</div>
+          <div className="text-[18px] font-bold pt-[2px]">{subTitle}</div>
+        </div>
+        <div className="pl-[7px]">
+          <RightArrow width="6.14" height="10.61" fill="#2D5500" />
+        </div>
       </div>
-      <div className="pl-[7px]">
-        <RightArrow width="6.14" height="10.61" fill="#2D5500" />
+      <div className="absolute bottom-[13px] right-[23px]">
+        <Image src={iconSrc} alt="icon" width="98" height="98" />
       </div>
     </div>
-    <div className="absolute bottom-[13px] right-[23px]">
-      <Image src={iconSrc} alt="icon" width="98" height="98" />
-    </div>
-  </div>
-)
+  )
+
+  return link ? <Link href={link}>{renderCardContent}</Link> : <div>{renderCardContent}</div>
+}
 
 export default Home
