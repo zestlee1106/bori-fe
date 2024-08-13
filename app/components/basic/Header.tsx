@@ -1,7 +1,7 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
-import React from 'react'
+import React, { useMemo } from 'react'
 import classnames from 'classnames'
 import Image from 'next/image'
 import Logo from '@/public/icon/logo.png'
@@ -55,13 +55,17 @@ const Header = () => {
   const pathname = usePathname()
   const router = useRouter()
 
-  const { left, center, right, backgroundColor, position } = HEADER_CONFIG[pathname] || {
-    left: 'logo',
-    center: null,
-    right: null,
-    backgroundColor: 'transparent',
-    position: 'absolute',
-  }
+  const { left, center, right, backgroundColor, position } = useMemo(() => {
+    return (
+      HEADER_CONFIG[pathname] || {
+        left: 'logo',
+        center: null,
+        right: null,
+        backgroundColor: 'transparent',
+        position: 'absolute',
+      }
+    )
+  }, [pathname])
 
   /**
    * 뒤로가기 버튼 이벤트 핸들러
