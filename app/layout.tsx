@@ -5,6 +5,7 @@ import Header from './components/basic/Header'
 import Nav from './components/basic/Nav'
 import Background from './components/basic/Background'
 import localFont from 'next/font/local'
+import ToastList from '@/app/components/container/ToastList'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -52,6 +53,8 @@ const RootLayout = ({
           </Background>
         </div>
         <Nav />
+        <ToastList />
+        <div className="fixed bottom-10" id="toast-root" />
       </body>
     </html>
   )
