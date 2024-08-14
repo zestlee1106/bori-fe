@@ -3,7 +3,7 @@ import { uniqueId } from 'lodash'
 
 export interface Toast {
   id: string
-  text: string
+  text: string | React.JSX.Element
   duration?: number
 }
 
@@ -12,7 +12,7 @@ interface ToastState {
 }
 
 interface ToastActions {
-  addToast: (message: string) => void
+  addToast: (message: string | React.JSX.Element) => void
   removeToast: (id: string) => void
 }
 
@@ -21,7 +21,7 @@ const useToastStore = create<ToastState & ToastActions>((set, get) => ({
   toastList: [],
 
   // action
-  addToast: (message: string) => {
+  addToast: (message: string | React.JSX.Element) => {
     const id = uniqueId('toast-')
     const newToastList = [
       ...get().toastList,
