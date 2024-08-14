@@ -23,7 +23,7 @@ const Home = async () => {
       {/* 중간 텍스트 영역 */}
       <div className="h-[53px] mt-[25px] flex items-center">
         <Image src="/icon/home-marker.png" alt="home" width="53" height="53" />
-        <div className="font-extrabold text-[22px] tracking-[-0.55px] leading-[34px]">
+        <div className="font-extrabold text-[22px] tracking-[-0.025em] leading-[34px]">
           우리 동네 <span className="text-GREEN_800">보청기 판매점</span> 찾기
         </div>
       </div>
@@ -54,7 +54,7 @@ const HomeCard = ({ title, subTitle, backgroundColor, iconSrc, link }: HomeCardP
   const renderCardContent = (
     <div className={`rounded-[20px] relative drop-shadow-lg ${backgroundColor} w-full h-[124px]`}>
       <div className="flex items-center pt-[31px] pl-[33px]">
-        <div className="text-[22px] tracking-[-0.55px] leading-[34px] w-[143px]">
+        <div className="text-[22px] tracking-[-0.025em] leading-[34px] w-[143px]">
           <div className="text-GREEN_800 font-extrabold">{title}</div>
           <div className="text-[18px] font-bold pt-[2px]">{subTitle}</div>
         </div>

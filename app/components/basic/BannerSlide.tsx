@@ -20,8 +20,8 @@ const BannerSlide = ({ startColor, endColor, imageLink, title, subTitle }: Banne
         className="rounded-[20px] relative"
       >
         <div className="w-[342px] h-[168px] pt-[38px] pl-[27px] pr-[56px]">
-          <div className="font-extrabold text-[22px] tracking-[-0.55px] leading-[30px]">{title}</div>
-          <div className="flex items-center pt-[8px] text-GREY_700 tracking-[-0.55px] leading-[30px] text-[14px] font-semibold">
+          <div className="font-extrabold text-[22px] tracking-[-0.025em] leading-[30px]">{title}</div>
+          <div className="flex items-center pt-[8px] text-GREY_700 tracking-[-0.025em] leading-[30px] text-[14px] font-semibold">
             {subTitle}
             <div className="pl-[6.75px]">
               <RightArrow width="4.91" height="8.49" fill="#555557" />
