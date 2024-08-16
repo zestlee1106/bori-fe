@@ -9,7 +9,7 @@ import { Transition, TransitionGroup } from 'react-transition-group'
 export const DEFAULT_DURATION = 1000 // 기본 유지 시간
 
 const ENTER_DURATION = 1000 // 나타나는 애니메이션 시간
-const EXIT_DURATION = 1000 // 사라지는 애니메이션 시간
+const EXIT_DURATION = 500 // 사라지는 애니메이션 시간
 
 const transitionStyles: Record<string, CSSProperties> = {
   entering: {
@@ -24,7 +24,7 @@ const transitionStyles: Record<string, CSSProperties> = {
   },
   exiting: {
     opacity: 0,
-    transition: `opacity ${EXIT_DURATION}ms ease-in-out, transform ${EXIT_DURATION}ms ease-in-out`,
+    transition: `opacity ${EXIT_DURATION / 2}ms ease-in-out, transform ${EXIT_DURATION}ms ease-in-out`,
     transform: 'translateY(0)',
   },
 }
