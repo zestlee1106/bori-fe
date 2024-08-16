@@ -1,7 +1,8 @@
 'use client'
 
-import React, { useEffect } from 'react'
+import React from 'react'
 import useToast from '@/app/hooks/toast'
+import Shop from '@/app/components/container/Shop'
 
 const CopyToastMessage = ({ text }: { text: string }) => {
   return (
@@ -24,8 +25,13 @@ const page = () => {
 
   return (
     <div>
-      <button onClick={copyPhoneNumber}>전번 복사</button>
-      <button onClick={copyAddress}>주소 복사</button>
+      <div className="flex fixed top-header mt-[10px] h-[33px]">
+        <div className="w-[85px] h-[23px] py-[5px] bg-GREEN_800 items-center flex">지역선택</div>
+        <div>지역</div>
+      </div>
+      <div className="pt-[57px]">
+        <Shop />
+      </div>
     </div>
   )
 }
