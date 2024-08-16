@@ -52,7 +52,7 @@ interface HomeCardProps {
 
 const HomeCard = ({ title, subTitle, backgroundColor, iconSrc, link }: HomeCardProps) => {
   const renderCardContent = (
-    <div className={`rounded-[20px] relative drop-shadow-lg ${backgroundColor} w-full h-[124px]`}>
+    <div className={`rounded-[20px] relative shadow-CARD_SHADOW ${backgroundColor} w-full h-[124px]`}>
       <div className="flex items-center pt-[31px] pl-[33px]">
         <div className="text-[22px] tracking-[-0.025em] leading-[34px] w-[143px]">
           <div className="text-GREEN_800 font-extrabold">{title}</div>
