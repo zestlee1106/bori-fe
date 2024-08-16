@@ -20,6 +20,7 @@ interface HeaderConfig {
   left: 'logo' | 'back'
   center: string | React.JSX.Element | null
   right: HeaderItem | null
+  paddingX?: number
 }
 
 const ShopTitle = () => {
@@ -48,6 +49,7 @@ const HEADER_CONFIG: Record<string, HeaderConfig> = {
       element: <HomeIcon />,
       onClick: 'navigateHome',
     },
+    paddingX: 15,
   },
 }
 
@@ -55,7 +57,7 @@ const Header = () => {
   const pathname = usePathname()
   const router = useRouter()
 
-  const { left, center, right, backgroundColor, position } = useMemo(() => {
+  const { left, center, right, backgroundColor, position, paddingX } = useMemo(() => {
     return (
       HEADER_CONFIG[pathname] || {
         left: 'logo',
@@ -92,24 +94,28 @@ const Header = () => {
 
   return (
     <header
-      className={classnames('top-0 w-full max-w-screen h-header items-center flex px-[29px]', {
+      className={classnames('top-0 w-full max-w-screen h-header items-center flex', {
         'bg-none': backgroundColor === 'transparent',
         'bg-white': backgroundColor === 'white',
         'bg-black': backgroundColor === 'black',
         fixed: position === 'fixed',
         absolute: position === 'absolute',
       })}
+      style={{
+        paddingLeft: paddingX || '29px',
+        paddingRight: paddingX || '29px',
+      }}
     >
       <div className="flex justify-between items-center w-full">
         {left === 'logo' && <Image className="w-[50px] h-[50px]" src={Logo} alt="logo" />}
         {left === 'back' && (
-          <div className="justify-start" onClick={handleBackClick}>
+          <div className="justify-start pl-[9px] pr-[14px] pt-[7px] pb-[6px]" onClick={handleBackClick}>
             <LeftArrowIcon />
           </div>
         )}
         {center && <div>{center}</div>}
         {right && (
-          <div className="justify-end" onClick={handleRightClick}>
+          <div className="justify-end pl-[6px] pr-[9px] pt-[7px] pb-[8px]" onClick={handleRightClick}>
             {right.element}
           </div>
         )}
