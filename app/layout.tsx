@@ -54,7 +54,7 @@ const RootLayout = ({
         </div>
         <Nav />
         <ToastList />
-        <div className="max-w-screen min-w-screen w-full fixed bottom-[26px] px-[24px]" id="toast-root" />
+        <div className="max-w-screen min-w-screen w-full fixed bottom-[26px]" id="toast-root" />
       </body>
     </html>
   )
