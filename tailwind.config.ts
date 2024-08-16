@@ -48,6 +48,9 @@ const config: Config = {
       fontFamily: {
         pretendard: ['var(--font-pretendard)'],
       },
+      fontWeight: {
+        regular: '400',
+      },
     },
   },
   plugins: [],

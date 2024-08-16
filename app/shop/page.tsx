@@ -5,9 +5,9 @@ import useToast from '@/app/hooks/toast'
 
 const CopyToastMessage = ({ text }: { text: string }) => {
   return (
-    <>
-      <span className="font-bold">{text}</span> 가 복사되었습니다.
-    </>
+    <div className="font-regular">
+      <span className="font-semibold">{text}</span> 가 복사되었습니다.
+    </div>
   )
 }
 
