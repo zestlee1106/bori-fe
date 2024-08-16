@@ -8,6 +8,7 @@ import Logo from '@/public/icon/logo.png'
 import HomeIcon from '@/public/icon/home.svg'
 import LeftArrowIcon from '@/public/icon/left-arrow.svg'
 import { useRouter } from 'next/navigation'
+import useHeaderStore from '@/app/stores/header'
 
 interface HeaderItem {
   element: React.JSX.Element
@@ -69,6 +70,8 @@ const Header = () => {
     )
   }, [pathname])
 
+  const { additionalHeaderContent } = useHeaderStore()
+
   /**
    * 뒤로가기 버튼 이벤트 핸들러
    */
@@ -94,7 +97,7 @@ const Header = () => {
 
   return (
     <header
-      className={classnames('top-0 w-full max-w-screen h-header items-center flex z-[8000]', {
+      className={classnames('top-0 w-full max-w-screen items-center flex z-[8000]', {
         'bg-none': backgroundColor === 'transparent',
         'bg-white': backgroundColor === 'white',
         'bg-black': backgroundColor === 'black',
@@ -106,19 +109,22 @@ const Header = () => {
         paddingRight: paddingX || '29px',
       }}
     >
-      <div className="flex justify-between items-center w-full">
-        {left === 'logo' && <Image className="w-[50px] h-[50px]" src={Logo} alt="logo" />}
-        {left === 'back' && (
-          <div className="justify-start pl-[9px] pr-[14px] pt-[7px] pb-[6px]" onClick={handleBackClick}>
-            <LeftArrowIcon />
-          </div>
-        )}
-        {center && <div>{center}</div>}
-        {right && (
-          <div className="justify-end pl-[6px] pr-[9px] pt-[7px] pb-[8px]" onClick={handleRightClick}>
-            {right.element}
-          </div>
-        )}
+      <div className="flex w-full flex-col">
+        <div className="flex h-header justify-between items-center w-full">
+          {left === 'logo' && <Image className="w-[50px] h-[50px]" src={Logo} alt="logo" />}
+          {left === 'back' && (
+            <div className="justify-start pl-[9px] pr-[14px] pt-[7px] pb-[6px]" onClick={handleBackClick}>
+              <LeftArrowIcon />
+            </div>
+          )}
+          {center && <div>{center}</div>}
+          {right && (
+            <div className="justify-end pl-[6px] pr-[9px] pt-[7px] pb-[8px]" onClick={handleRightClick}>
+              {right.element}
+            </div>
+          )}
+        </div>
+        {additionalHeaderContent && additionalHeaderContent}
       </div>
     </header>
   )
