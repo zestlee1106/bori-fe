@@ -3,10 +3,10 @@
 import React, { useEffect } from 'react'
 import useToast from '@/app/hooks/toast'
 
-const ToastMessage = () => {
+const CopyToastMessage = ({ text }: { text: string }) => {
   return (
     <>
-      <span className="font-bold">전화번호</span> 가 복사되었습니다.
+      <span className="font-bold">{text}</span> 가 복사되었습니다.
     </>
   )
 }
@@ -14,11 +14,20 @@ const ToastMessage = () => {
 const page = () => {
   const { toast } = useToast()
 
-  useEffect(() => {
-    toast(<ToastMessage />)
-  }, [])
+  const copyPhoneNumber = () => {
+    toast(<CopyToastMessage text="전화번호" />)
+  }
 
-  return <div>page</div>
+  const copyAddress = () => {
+    toast(<CopyToastMessage text="주소" />)
+  }
+
+  return (
+    <div>
+      <button onClick={copyPhoneNumber}>전번 복사</button>
+      <button onClick={copyAddress}>주소 복사</button>
+    </div>
+  )
 }
 
 export default page
