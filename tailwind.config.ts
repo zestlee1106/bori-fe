@@ -26,6 +26,9 @@ const config: Config = {
       margin: {
         header: HEADER_HEIGHT,
       },
+      top: {
+        header: HEADER_HEIGHT,
+      },
       colors: {
         primaryLight: 'rgba(132, 169, 61, 0.2)', // 20% 투명도 적용된 primary 색상
         GREEN_800: '#2D5500',
