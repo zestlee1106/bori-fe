@@ -43,14 +43,18 @@ const Shop = () => {
           복사
         </button>
       </div>
-      <div className="flex gap-[7px] pt-[10px]">
-        <div className="flex px-[10px] py-[4px] text-[6px] leading-[7.16px] font-bold bg-GREY_700 text-WHITE_1000 rounded-[50px] items-center">
-          <SubwayIcon />
-          지하철역 거리m
+      <div className="flex gap-[7px] pt-[5px]">
+        <div className="flex px-[10px] py-[4px] text-[10px] leading-none font-bold bg-GREY_700 text-WHITE_1000 rounded-[50px] items-center h-[20px]">
+          <div className="mr-[2px] flex items-center">
+            <SubwayIcon />
+          </div>
+          <span className="flex items-center">지하철역 거리m</span>
         </div>
-        <div className="flex px-[10px] py-[4px] text-[6px] leading-[7.16px] font-bold bg-GREY_700 text-WHITE_1000 rounded-[50px] items-center">
-          <MarkerWhiteIcon />
-          풍납동
+        <div className="flex px-[10px] py-[4px] text-[10px] leading-none font-bold bg-GREY_700 text-WHITE_1000 rounded-[50px] items-center h-[20px]">
+          <div className="mr-[2px] flex items-center">
+            <MarkerWhiteIcon />
+          </div>
+          <span className="flex items-center">풍납동</span>
         </div>
       </div>
       <div className="mt-[10px] bg-WHITE_900 py-[3px] px-[15px] flex gap-[12px] font-semibold tracking-[-0.025em] text-GREEN_800 rounded-[10px]">
