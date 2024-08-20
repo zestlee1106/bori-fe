@@ -33,6 +33,7 @@ const config: Config = {
         primaryLight: 'rgba(132, 169, 61, 0.2)', // 20% 투명도 적용된 primary 색상
         GREEN_800: '#2D5500',
         GREEN_500: '#84A93D',
+        GREY_200: '#DADADA',
         GREY_700: '#555557',
         GREEN_300: '#A7C584',
         GREEN_400: '#B5DC69',
