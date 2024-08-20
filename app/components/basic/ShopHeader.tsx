@@ -9,7 +9,7 @@ const ShopHeader = () => {
   const { setAdditionalHeaderContent } = useHeaderStore()
 
   const Header = () => (
-    <div className="flex mt-[10px] h-[33px] z-[8000] px-[9px] items-end">
+    <div className="flex mt-[10px] z-[8000] px-[9px] items-end">
       <div className="h-[23px] px-[12px] py-[5px] bg-GREEN_800 items-center flex leading-[13.13px] tracking-[-0.025em] font-bold text-WHITE_1000 text-[11px] rounded-[50px] gap-[5.5px] mr-[16px] shadow-CARD_SHADOW">
         <SettingIcon />
         지역선택
