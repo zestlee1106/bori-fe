@@ -4,9 +4,9 @@ import ShopHeader from '@/app/components/basic/ShopHeader'
 
 const page = () => {
   return (
-    <div>
+    <div className="h-screen flex flex-col">
       <ShopHeader />
-      <div className="pt-[57px] flex flex-col gap-[12px]">
+      <div className="flex-1 overflow-y-auto flex flex-col gap-[12px] mt-[57px] mb-[57px]">
         <Shop />
         <Shop />
         <Shop />
