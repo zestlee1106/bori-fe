@@ -15,9 +15,12 @@ const ShopHeader = () => {
 
   useEffect(() => {
     setAdditionalHeaderContent(<Header />)
+    const originOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
 
     return () => {
       setAdditionalHeaderContent(null)
+      document.body.style.overflow = originOverflow
     }
   }, [])
 
