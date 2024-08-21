@@ -21,7 +21,7 @@ const Home = async () => {
       <Banner banners={banners} />
 
       {/* 중간 텍스트 영역 */}
-      <div className="h-[53px] mt-[25px] flex items-center">
+      <div className="h-[53px] mt-[10px] flex items-center">
         <Image src="/icon/home-marker.png" alt="home" width="53" height="53" />
         <div className="font-extrabold text-[22px] tracking-[-0.025em] leading-[34px]">
           우리 동네 <span className="text-GREEN_800">보청기 판매점</span> 찾기

@@ -4,3 +4,7 @@
 .swiper-pagination-bullet-active {
   @apply w-[14px] h-[4px] bg-black; /* 활성화된 bullet 스타일 (가까워질수록 넓어지는 효과) */
 }
+
+.swiper-pagination {
+  @apply mb-[10px]
+}
