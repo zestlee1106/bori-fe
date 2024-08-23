@@ -49,7 +49,7 @@ const RootLayout = ({
         <Header />
         <div className="max-w-screen min-w-screen min-h-screen bg-white w-full flex flex-col">
           <Background>
-            <div className="px-[24px]">{children}</div>
+            <div className="px-[2.4rem]">{children}</div>
           </Background>
         </div>
         <Nav />

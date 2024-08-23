@@ -26,7 +26,7 @@ interface HeaderConfig {
 
 const ShopTitle = () => {
   return (
-    <div className="font-pretendard font-extrabold text-[22px]">
+    <div className="font-pretendard font-extrabold text-[2.2rem]">
       지역별 <span className="text-GREEN_800">보청기 판매점</span> 모음
     </div>
   )
@@ -50,7 +50,7 @@ const HEADER_CONFIG: Record<string, HeaderConfig> = {
       element: <HomeIcon />,
       onClick: 'navigateHome',
     },
-    paddingX: 15,
+    paddingX: 1.5,
   },
 }
 
@@ -105,21 +105,21 @@ const Header = () => {
         absolute: position === 'absolute',
       })}
       style={{
-        paddingLeft: paddingX || '29px',
-        paddingRight: paddingX || '29px',
+        paddingLeft: `${paddingX || '2.9'}rem`,
+        paddingRight: `${paddingX || '2.9'}rem`,
       }}
     >
       <div className="flex w-full flex-col">
         <div className="flex h-header justify-between items-center w-full">
-          {left === 'logo' && <Image className="w-[50px] h-[50px]" src={Logo} alt="logo" />}
+          {left === 'logo' && <Image className="w-[5rem] h-[5rem]" src={Logo} alt="logo" />} {/* 50px -> 5rem */}
           {left === 'back' && (
-            <div className="justify-start pl-[9px] pr-[14px] pt-[7px] pb-[6px]" onClick={handleBackClick}>
+            <div className="justify-start pl-[0.9rem] pr-[1.4rem] pt-[0.7rem] pb-[0.6rem]" onClick={handleBackClick}>
               <LeftArrowIcon />
             </div>
           )}
           {center && <div>{center}</div>}
           {right && (
-            <div className="justify-end pl-[6px] pr-[9px] pt-[7px] pb-[8px]" onClick={handleRightClick}>
+            <div className="justify-end pl-[0.6rem] pr-[0.9rem] pt-[0.7rem] pb-[0.8rem]" onClick={handleRightClick}>
               {right.element}
             </div>
           )}

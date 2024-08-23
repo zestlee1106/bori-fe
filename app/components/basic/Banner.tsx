@@ -24,16 +24,16 @@ const Banner = ({ banners }: BannerProps) => {
       loop
       style={{
         // 그림자가 잘리지 않게끔 스타일 추가
-        width: 'calc(100% + 30px)',
-        padding: '0 15px',
-        marginLeft: '-15px',
-        paddingRight: '15px',
-        paddingBottom: '15px',
+        width: 'calc(100% + 3rem)',
+        padding: '0 1.5rem',
+        marginLeft: '-1.5rem',
+        paddingRight: '1.5rem',
+        paddingBottom: '1.5rem',
       }}
     >
       {banners.map((banner) => (
         <SwiperSlide key={`banner-${banner.order}`}>
-          <div className="rounded-[20px] shadow-CARD_SHADOW">
+          <div className="rounded-[2rem] shadow-CARD_SHADOW">
             <BannerSlide
               startColor={`#${banner.backgroundColors[1]}`}
               endColor={`#${banner.backgroundColors[0]}`}

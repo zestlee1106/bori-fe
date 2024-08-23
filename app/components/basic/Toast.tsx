@@ -15,7 +15,7 @@ const Toast = ({ toast }: IToastProps) => {
 
   return (
     <div
-      className="bg-BLACK_900 rounded-[10px] h-[42px] text-WHITE_1000 py-[11px] pl-[22px] text-[14px] leading-[20px] tracking-[-0.025em] absolute left-0 right-0 mx-auto w-[calc(100%-48px)] bottom-0"
+      className="bg-BLACK_900 rounded-[1rem] h-[4.2rem] text-WHITE_1000 py-[1.1rem] pl-[2.2rem] text-[1.4rem] leading-[2rem] tracking-[-0.025em] absolute left-0 right-0 mx-auto w-[calc(100%-4.8rem)] bottom-0"
       style={{
         zIndex: calculatedZIndex,
       }}

@@ -1,10 +1,11 @@
 .swiper-pagination-bullet {
-  @apply w-[4px] h-[4px] bg-GREY_700 rounded-full transition-all duration-300 mx-[2px]; /* 기본 bullet 스타일 */
+  @apply w-[0.4rem] h-[0.4rem] bg-GREY_700 rounded-full transition-all duration-300 mx-[0.2rem]; /* 기본 bullet 스타일 */
 }
+
 .swiper-pagination-bullet-active {
-  @apply w-[14px] h-[4px] bg-black; /* 활성화된 bullet 스타일 (가까워질수록 넓어지는 효과) */
+  @apply w-[1.4rem] h-[0.4rem] bg-black; /* 활성화된 bullet 스타일 (가까워질수록 넓어지는 효과) */
 }
 
 .swiper-pagination {
-  @apply mb-[10px]
+  @apply mb-[1rem];
 }

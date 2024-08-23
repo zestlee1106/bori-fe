@@ -20,7 +20,7 @@ const transitionStyles: Record<string, CSSProperties> = {
   entered: {
     opacity: 1,
     transition: `opacity ${ENTER_DURATION / 2}ms ease-in-out, transform ${ENTER_DURATION}ms ease-in-out`,
-    transform: 'translateY(-24px)',
+    transform: 'translateY(-2.4rem)',
   },
   exiting: {
     opacity: 0,

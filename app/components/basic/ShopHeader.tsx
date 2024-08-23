@@ -9,13 +9,13 @@ const ShopHeader = () => {
   const { setAdditionalHeaderContent } = useHeaderStore()
 
   const Header = () => (
-    <div className="flex mt-[10px] z-[8000] px-[9px] items-end">
-      <div className="h-[23px] px-[12px] py-[5px] bg-GREEN_800 items-center flex leading-[13.13px] tracking-[-0.025em] font-bold text-WHITE_1000 text-[11px] rounded-[50px] gap-[5.5px] mr-[16px] shadow-CARD_SHADOW">
+    <div className="flex mt-[1rem] z-[8000] px-[0.9rem] items-end">
+      <div className="h-[2.3rem] px-[1.2rem] py-[0.5rem] bg-GREEN_800 items-center flex leading-[1.313rem] tracking-[-0.025em] font-bold text-WHITE_1000 text-[1.1rem] rounded-[5rem] gap-[0.55rem] mr-[1.6rem] shadow-CARD_SHADOW">
         <SettingIcon />
         지역선택
         <DownArrowIcon />
       </div>
-      <div className="bg-GREY_200 h-[20px] text-[10px] font-bold text-GREY_700 py-[4px] px-[10px] leading-[11.93px] tracking-[-0.025em] rounded-[50px] shadow-CARD_SHADOW">
+      <div className="bg-GREY_200 h-[2rem] text-[1rem] font-bold text-GREY_700 py-[0.4rem] px-[1rem] leading-[1.193rem] tracking-[-0.025em] rounded-[5rem] shadow-CARD_SHADOW">
         전국
       </div>
     </div>

@@ -21,14 +21,14 @@ const Home = async () => {
       <Banner banners={banners} />
 
       {/* 중간 텍스트 영역 */}
-      <div className="h-[53px] mt-[10px] flex items-center">
+      <div className="h-[5.3rem] mt-[1rem] flex items-center">
         <Image src="/icon/home-marker.png" alt="home" width="53" height="53" />
-        <div className="font-extrabold text-[22px] tracking-[-0.025em] leading-[34px]">
+        <div className="font-extrabold text-[2.2rem] tracking-[-0.025em] leading-[3.4rem]">
           우리 동네 <span className="text-GREEN_800">보청기 판매점</span> 찾기
         </div>
       </div>
 
-      <div className="flex pt-[20px] gap-[20px] flex-col">
+      <div className="flex pt-[2rem] gap-[2rem] flex-col">
         <HomeCard
           title="지역별 판매점"
           subTitle="검색하기"
@@ -52,17 +52,17 @@ interface HomeCardProps {
 
 const HomeCard = ({ title, subTitle, backgroundColor, iconSrc, link }: HomeCardProps) => {
   const renderCardContent = (
-    <div className={`rounded-[20px] relative shadow-CARD_SHADOW ${backgroundColor} w-full h-[124px]`}>
-      <div className="flex items-center pt-[31px] pl-[33px]">
-        <div className="text-[22px] tracking-[-0.025em] leading-[34px] w-[143px]">
+    <div className={`rounded-[2rem] relative shadow-CARD_SHADOW ${backgroundColor} w-full h-[12.4rem]`}>
+      <div className="flex items-center pt-[3.1rem] pl-[3.3rem]">
+        <div className="text-[2.2rem] tracking-[-0.025em] leading-[3.4rem] w-[14.3rem]">
           <div className="text-GREEN_800 font-extrabold">{title}</div>
-          <div className="text-[18px] font-bold pt-[2px]">{subTitle}</div>
+          <div className="text-[1.8rem] font-bold pt-[0.2rem]">{subTitle}</div>
         </div>
-        <div className="pl-[7px]">
+        <div className="pl-[0.7rem]">
           <RightArrow width="6.14" height="10.61" fill="#2D5500" />
         </div>
       </div>
-      <div className="absolute bottom-[13px] right-[23px]">
+      <div className="absolute bottom-[1.3rem] right-[2.3rem]">
         <Image src={iconSrc} alt="icon" width="98" height="98" />
       </div>
     </div>
