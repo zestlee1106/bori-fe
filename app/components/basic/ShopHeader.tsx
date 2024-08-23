@@ -15,8 +15,16 @@ const ShopHeader = () => {
         지역선택
         <DownArrowIcon />
       </div>
-      <div className="bg-GREY_200 h-[2rem] text-[1rem] font-bold text-GREY_700 py-[0.4rem] px-[1rem] leading-[1.193rem] tracking-[-0.025em] rounded-[5rem] shadow-CARD_SHADOW">
-        전국
+      <div className="flex gap-[1.1rem]">
+        <div className="bg-GREY_200 h-[2rem] text-[1rem] font-bold text-GREY_700 py-[0.4rem] px-[1rem] leading-[1.193rem] tracking-[-0.025em] rounded-[5rem] shadow-CARD_SHADOW">
+          전국
+        </div>
+        <div className="bg-GREY_200 h-[2rem] text-[1rem] font-bold text-GREY_700 py-[0.4rem] px-[1rem] leading-[1.193rem] tracking-[-0.025em] rounded-[5rem] shadow-CARD_SHADOW">
+          강남구
+        </div>
+        <div className="bg-GREY_200 h-[2rem] text-[1rem] font-bold text-GREY_700 py-[0.4rem] px-[1rem] leading-[1.193rem] tracking-[-0.025em] rounded-[5rem] shadow-CARD_SHADOW">
+          송파구
+        </div>
       </div>
     </div>
   )

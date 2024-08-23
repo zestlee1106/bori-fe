@@ -6,23 +6,8 @@ import MarkerIcon from '@/public/icon/marker.svg'
 import MarkerWhiteIcon from '@/public/icon/marker-white.svg'
 import PhoneIcon from '@/public/icon/phone.svg'
 import SubwayIcon from '@/public/icon/subway.svg'
-import useToast from '@/app/hooks/toast'
-
-const CopyToastMessage = ({ text }: { text: string }) => {
-  return (
-    <div className="font-regular">
-      <span className="font-semibold">{text}</span> 가 복사되었습니다.
-    </div>
-  )
-}
 
 const Shop = () => {
-  const { toast } = useToast()
-
-  const copyPhoneNumber = () => {
-    toast(<CopyToastMessage text="전화번호" />)
-  }
-
   return (
     <div className="bg-WHITE_1000 py-[1.8rem] px-[2.4rem] rounded-[2rem] tracking-[-0.025em] font-semibold shadow-CARD_SHADOW relative">
       <div className="font-extrabold text-[1.8rem] text-GREEN_800 leading-[3rem]">판매점 명</div>
@@ -34,14 +19,7 @@ const Shop = () => {
         <div className="pr-[1rem]">
           <PhoneIcon />
         </div>
-        02-123-1234&nbsp;
-        <button
-          className="w-[2.3rem] h-[2rem] text-green-800 text-[rem]"
-          onClick={copyPhoneNumber}
-          aria-label="전화번호 복사"
-        >
-          복사
-        </button>
+        02-123-1234
       </div>
       <div className="flex gap-[0.7rem] pt-[0.5rem]">
         <div className="flex px-[1rem] py-[0.4rem] text-[1rem] leading-none font-bold bg-GREY_700 text-WHITE_1000 rounded-[5rem] items-center h-[2rem]">
