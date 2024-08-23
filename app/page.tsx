@@ -63,7 +63,7 @@ const HomeCard = ({ title, subTitle, backgroundColor, iconSrc, link }: HomeCardP
         </div>
       </div>
       <div className="absolute bottom-[1.3rem] right-[2.3rem]">
-        <Image src={iconSrc} alt="icon" width="98" height="98" />
+        <Image src={iconSrc} alt="icon" width="98" height="98" style={{ width: '9.8rem', height: '9.8rem' }} />
       </div>
     </div>
   )
