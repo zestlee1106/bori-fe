@@ -97,7 +97,7 @@ const Header = () => {
 
   return (
     <header
-      className={classnames('top-0 w-full max-w-screen items-center flex z-[8000]', {
+      className={classnames('top-0 w-full max-w-screen items-center flex z-[800]', {
         'bg-none': backgroundColor === 'transparent',
         'bg-white': backgroundColor === 'white',
         'bg-black': backgroundColor === 'black',
