@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Header from './components/basic/Header'
-import Nav from './components/basic/Nav'
-import Background from './components/basic/Background'
+import Header from '@/app/components/basic/Header'
+import Nav from '@/app/components/basic/Nav'
+import Background from '@/app/components/basic/Background'
 import localFont from 'next/font/local'
 import ToastList from '@/app/components/container/ToastList'
+import DialogList from '@/app/components/container/DialogList'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -54,7 +55,8 @@ const RootLayout = ({
         </div>
         <Nav />
         <ToastList />
-        <div id="dialog-root"></div>
+        <DialogList />
+        <div className="w-full h-full fixed z-[3000] top-0" id="dialog-root"></div>
         <div className="max-w-screen min-w-screen w-full fixed bottom-0" id="toast-root" />
       </body>
     </html>
