@@ -7,13 +7,21 @@ interface IDialogProps {
 
 const DIALOG_DEFAULT_Z_INDEX = 3000
 
-const Toast = ({ dialog }: IDialogProps) => {
+const Dialog = ({ dialog }: IDialogProps) => {
   const { id, content } = dialog
 
   const toastIndex = Number(id.replace('dialog-', ''))
   const calculatedZIndex = DIALOG_DEFAULT_Z_INDEX + toastIndex
 
-  return <div>{content}</div>
+  return (
+    <div
+      style={{
+        zIndex: calculatedZIndex,
+      }}
+    >
+      {content}
+    </div>
+  )
 }
 
-export default Toast
+export default Dialog

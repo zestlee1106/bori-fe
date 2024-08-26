@@ -15,6 +15,8 @@ interface DialogState {
 
 interface DialogAction {
   addDialog: (content: React.ReactNode) => void
+  removeDialog: (id: string) => void
+  popDialog: () => void
 }
 
 const useDialogStore = create<DialogState & DialogAction>((set, get) => ({

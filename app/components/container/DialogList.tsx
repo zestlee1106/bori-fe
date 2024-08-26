@@ -3,6 +3,7 @@
 import useDialogStore from '@/app/stores/dialog'
 import { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
+import Dialog from '../basic/Dialog'
 
 const DialogList = () => {
   const { dialogList } = useDialogStore()
@@ -24,8 +25,10 @@ const DialogList = () => {
 
   return ReactDOM.createPortal(
     <>
-      <div className="fixed w-full h-full bg-BLACK_1000 bg-opacity-50"></div>
-      <div>element</div>
+      {dialogList.length > 0 && <div className="fixed w-full h-full bg-BLACK_1000 bg-opacity-50"></div>}
+      {dialogList.map((dialog) => (
+        <Dialog key={dialog.id} dialog={dialog} />
+      ))}
     </>,
     dialogRoot,
   )
