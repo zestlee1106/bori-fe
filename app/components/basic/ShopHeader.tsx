@@ -33,7 +33,7 @@ const ShopHeader = () => {
   const { throwDialog } = useDialog()
 
   useEffect(() => {
-    throwDialog(<Popup />)
+    throwDialog(<Popup message="test" />)
   }, [])
 
   useEffect(() => {
