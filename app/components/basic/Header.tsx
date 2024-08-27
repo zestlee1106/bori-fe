@@ -97,7 +97,7 @@ const Header = () => {
 
   return (
     <header
-      className={classnames('top-0 w-full max-w-screen items-center flex z-[800]', {
+      className={classnames('top-0 w-full max-w-screen items-center flex', {
         'bg-none': backgroundColor === 'transparent',
         'bg-white': backgroundColor === 'white',
         'bg-black': backgroundColor === 'black',
@@ -109,7 +109,7 @@ const Header = () => {
         paddingRight: `${paddingX || '2.9'}rem`,
       }}
     >
-      <div className="flex w-full flex-col">
+      <div className="flex w-full flex-col z-[800]">
         <div className="flex h-header justify-between items-center w-full">
           {left === 'logo' && <Image className="w-[5rem] h-[5rem]" src={Logo} alt="logo" />} {/* 50px -> 5rem */}
           {left === 'back' && (

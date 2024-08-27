@@ -17,6 +17,7 @@ interface DialogAction {
   addDialog: (content: React.ReactNode) => void
   removeDialog: (id: string) => void
   popDialog: () => void
+  clearDialog: () => void
 }
 
 const useDialogStore = create<DialogState & DialogAction>((set, get) => ({
@@ -46,6 +47,9 @@ const useDialogStore = create<DialogState & DialogAction>((set, get) => ({
     const newDialogList = get().dialogList
     newDialogList.pop()
     set({ dialogList: newDialogList })
+  },
+  clearDialog: () => {
+    set({ dialogList: [] })
   },
 }))
 
