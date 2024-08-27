@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import { Dialog as DialogStore } from '@/app/stores/dialog'
 
 interface IDialogProps {
@@ -13,13 +13,17 @@ const Dialog = ({ dialog }: IDialogProps) => {
   const toastIndex = Number(id.replace('dialog-', ''))
   const calculatedZIndex = DIALOG_DEFAULT_Z_INDEX + toastIndex
 
+  const enhancedContent = React.isValidElement(content)
+    ? React.cloneElement(content as ReactElement, { id, ...content.props })
+    : content
+
   return (
     <div
       style={{
         zIndex: calculatedZIndex,
       }}
     >
-      {content}
+      {enhancedContent}
     </div>
   )
 }
