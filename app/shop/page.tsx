@@ -1,6 +1,6 @@
 import React from 'react'
-import Shop from '@/app/components/container/Shop'
-import ShopHeader from '@/app/components/basic/ShopHeader'
+import Shop from '@/app/components/sections/Shop'
+import ShopHeader from '@/app/components/sections/ShopHeader'
 
 const page = () => {
   return (

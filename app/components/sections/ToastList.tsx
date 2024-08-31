@@ -3,7 +3,7 @@
 import React, { CSSProperties, useEffect, useRef, useState } from 'react'
 import useToastStore from '@/app/stores/toast'
 import ReactDOM from 'react-dom'
-import Toast from '@/app/components/basic/Toast'
+import Toast from '@/app/components/blocks/Toast'
 import { Transition, TransitionGroup } from 'react-transition-group'
 
 export const DEFAULT_DURATION = 1000 // 기본 유지 시간

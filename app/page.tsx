@@ -1,6 +1,6 @@
 import RightArrow from '@/public/icon/right-arrow.svg'
 import Image from 'next/image'
-import Banner from './components/basic/Banner'
+import Banner from './components/blocks/Banner'
 import { getBanners } from '@/app/api/modules/banner'
 import Link from 'next/link'
 

@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import InfoIcon from '@/public/icon/info.svg'
 import XIcon from '@/public/icon/x.svg'
 import ResetIcon from '@/public/icon/reset.svg'
-import Space from '@/app/components/basic/Space'
+import Space from '@/app/components/atoms/Space'
 import GrayXIcon from '@/public/icon/gray-x.svg'
 import useDialog from '@/app/hooks/dialog'
-import Checkbox from './Checkbox'
+import Checkbox from '../atoms/Checkbox'
 
 interface PopupProps {
   id?: string

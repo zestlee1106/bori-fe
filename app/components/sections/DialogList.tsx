@@ -3,7 +3,7 @@
 import useDialogStore from '@/app/stores/dialog'
 import { useEffect, useState, useRef } from 'react'
 import ReactDOM from 'react-dom'
-import Dialog from '../basic/Dialog'
+import Dialog from '../blocks/Dialog'
 import { usePathname } from 'next/navigation'
 
 const DialogList = () => {

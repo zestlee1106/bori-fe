@@ -5,7 +5,7 @@ import React, { useEffect } from 'react'
 import SettingIcon from '@/public/icon/setting.svg'
 import DownArrowIcon from '@/public/icon/down-arrow.svg'
 import useDialog from '@/app/hooks/dialog'
-import Popup from './Popup'
+import Popup from '@/app/components/blocks/Popup'
 
 const Chip = ({ children }: { children: React.ReactNode }) => (
   <div className="bg-GREY_200 h-[2rem] text-[1rem] font-bold text-GREY_700 py-[0.4rem] px-[1rem] leading-[1.193rem] tracking-[-0.025em] rounded-[5rem] shadow-CARD_SHADOW">

@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Header from '@/app/components/basic/Header'
-import Nav from '@/app/components/basic/Nav'
-import Background from '@/app/components/basic/Background'
+import Header from '@/app/components/blocks/Header'
+import Nav from '@/app/components/blocks/Nav'
+import Background from '@/app/components/sections/Background'
 import localFont from 'next/font/local'
-import ToastList from '@/app/components/container/ToastList'
-import DialogList from '@/app/components/container/DialogList'
+import ToastList from '@/app/components/sections/ToastList'
+import DialogList from '@/app/components/sections/DialogList'
 
 const inter = Inter({ subsets: ['latin'] })
 

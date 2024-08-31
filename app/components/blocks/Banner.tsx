@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import BannerSlide from '@/app/components/basic/BannerSlide'
+import BannerSlide from '@/app/components/sections/BannerSlide'
 import { Banner as BannerType } from '@/types/banner'
 import { Pagination } from 'swiper/modules'
 
