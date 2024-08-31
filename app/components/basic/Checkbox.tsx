@@ -1,5 +1,6 @@
 import React from 'react'
-import CheckIcon from '@/public/icon/check.svg'
+import EmptyCheckbox from '@/public/icon/checkbox-empty.svg'
+import CheckedCheckbox from '@/public/icon/checkbox-checked.svg'
 
 interface CheckboxProps {
   id?: string
@@ -17,13 +18,7 @@ const Checkbox = ({ id, label, checked, onChange }: CheckboxProps) => {
     <div className="flex items-center">
       <input id={id} type="checkbox" checked={checked} onChange={handleChange} className="hidden" />
       <label htmlFor={id} className="flex items-center cursor-pointer">
-        <span
-          className={`w-[1.5rem] h-[1.5rem] flex items-center justify-center border-[0.1rem] rounded border-GREEN_800 ${
-            checked ? 'bg-GREEN_800' : 'bg-WHITE_1000'
-          }`}
-        >
-          {checked && <CheckIcon />}
-        </span>
+        {checked ? <CheckedCheckbox /> : <EmptyCheckbox />}
         <span className="ml-2">{label}</span>
       </label>
     </div>
