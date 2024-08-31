@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import InfoIcon from '@/public/icon/info.svg'
 import XIcon from '@/public/icon/x.svg'
 import ResetIcon from '@/public/icon/reset.svg'
 import Space from '@/app/components/basic/Space'
 import GrayXIcon from '@/public/icon/gray-x.svg'
 import useDialog from '@/app/hooks/dialog'
+import Checkbox from './Checkbox'
 
 interface PopupProps {
   id?: string
@@ -13,10 +14,15 @@ interface PopupProps {
 
 const Popup = ({ id, message }: PopupProps) => {
   const { closeDialog } = useDialog()
+  const [checked, setChecked] = useState(false)
 
   const handleClose = () => {
     console.log('🧡💛💙 영우의 로그 => message', message)
     closeDialog(id)
+  }
+
+  const handleCheck = () => {
+    setChecked((prev) => !prev)
   }
 
   return (
@@ -113,10 +119,80 @@ const Popup = ({ id, message }: PopupProps) => {
 
           {/* 구 */}
           <div className="overflow-y-auto pr-[2.2rem] w-full">
+            <label className="flex pl-[2.3rem] items-center h-[4.8rem] cursor-pointer">
+              <div className="font-bold text-[1.4rem] text-BLACK_1000">강남구</div>
+              <Space />
+              <Checkbox checked={checked} onChange={handleCheck} />
+            </label>
             <div className="flex pl-[2.3rem] items-center h-[4.8rem]">
               <div className="font-bold text-[1.4rem] text-BLACK_1000">강남구</div>
               <Space />
-              <div>체크박스</div>
+              <Checkbox />
+            </div>
+            <div className="flex pl-[2.3rem] items-center h-[4.8rem]">
+              <div className="font-bold text-[1.4rem] text-BLACK_1000">강남구</div>
+              <Space />
+              <Checkbox />
+            </div>
+            <div className="flex pl-[2.3rem] items-center h-[4.8rem]">
+              <div className="font-bold text-[1.4rem] text-BLACK_1000">강남구</div>
+              <Space />
+              <Checkbox />
+            </div>
+            <div className="flex pl-[2.3rem] items-center h-[4.8rem]">
+              <div className="font-bold text-[1.4rem] text-BLACK_1000">강남구</div>
+              <Space />
+              <Checkbox />
+            </div>
+            <div className="flex pl-[2.3rem] items-center h-[4.8rem]">
+              <div className="font-bold text-[1.4rem] text-BLACK_1000">강남구</div>
+              <Space />
+              <Checkbox />
+            </div>
+            <div className="flex pl-[2.3rem] items-center h-[4.8rem]">
+              <div className="font-bold text-[1.4rem] text-BLACK_1000">강남구</div>
+              <Space />
+              <Checkbox />
+            </div>
+            <div className="flex pl-[2.3rem] items-center h-[4.8rem]">
+              <div className="font-bold text-[1.4rem] text-BLACK_1000">강남구</div>
+              <Space />
+              <Checkbox />
+            </div>
+            <div className="flex pl-[2.3rem] items-center h-[4.8rem]">
+              <div className="font-bold text-[1.4rem] text-BLACK_1000">강남구</div>
+              <Space />
+              <Checkbox />
+            </div>
+            <div className="flex pl-[2.3rem] items-center h-[4.8rem]">
+              <div className="font-bold text-[1.4rem] text-BLACK_1000">강남구</div>
+              <Space />
+              <Checkbox />
+            </div>
+            <div className="flex pl-[2.3rem] items-center h-[4.8rem]">
+              <div className="font-bold text-[1.4rem] text-BLACK_1000">강남구</div>
+              <Space />
+              <Checkbox />
+            </div>
+            <div className="flex pl-[2.3rem] items-center h-[4.8rem]">
+              <div className="font-bold text-[1.4rem] text-BLACK_1000">강남구</div>
+              <Space />
+              <Checkbox />
+            </div>
+            <div className="flex pl-[2.3rem] items-center h-[4.8rem]">
+              <div className="font-bold text-[1.4rem] text-BLACK_1000">강남구</div>
+              <Space />
+              <Checkbox />
+            </div>
+            <div className="flex pl-[2.3rem] items-center h-[4.8rem]">
+              <div className="font-bold text-[1.4rem] text-BLACK_1000">강남구</div>
+              <Space />
+              <Checkbox />
+            </div>
+            <div className="flex pl-[2.3rem] items-center h-[4.8rem]">
+              <div className="font-bold text-[1.4rem] text-BLACK_1000">강남구</div>
+              <Space />
+              <Checkbox />
             </div>
           </div>
         </div>
