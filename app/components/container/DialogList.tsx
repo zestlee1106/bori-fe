@@ -36,8 +36,8 @@ const DialogList = () => {
   return ReactDOM.createPortal(
     <>
       {dialogList.length > 0 && (
-        <div className="w-full h-full fixed z-[3000] top-0">
-          <div className="fixed w-full h-full bg-BLACK_1000 bg-opacity-50"></div>
+        <div className="max-w-screen w-full h-full fixed z-[3000] top-0">
+          <div className="fixed max-w-screen w-full h-full bg-BLACK_1000 bg-opacity-50"></div>
           {dialogList.map((dialog) => (
             <Dialog key={dialog.id} dialog={dialog} />
           ))}
