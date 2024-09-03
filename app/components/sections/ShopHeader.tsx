@@ -9,11 +9,6 @@ import RegionSelectorPopup from '@/app/components/templates/RegionSelectorPopup'
 
 const ShopHeader = () => {
   const { setAdditionalHeaderContent } = useHeaderStore()
-  const { throwDialog } = useDialog()
-
-  useEffect(() => {
-    throwDialog(<RegionSelectorPopup message="test" />)
-  }, [])
 
   useEffect(() => {
     setAdditionalHeaderContent(<HeaderContent />)
@@ -35,19 +30,30 @@ const Chip = ({ children }: { children: React.ReactNode }) => (
   </div>
 )
 
-const HeaderContent = () => (
-  <div className="flex mt-[1rem] z-[800] px-[0.9rem] items-end">
-    <div className="h-[2.3rem] px-[1.2rem] py-[0.5rem] bg-GREEN_800 items-center flex leading-[1.313rem] tracking-[-0.025em] font-bold text-WHITE_1000 text-[1.1rem] rounded-[5rem] gap-[0.55rem] mr-[1.6rem] shadow-CARD_SHADOW">
-      <SettingIcon />
-      지역선택
-      <DownArrowIcon />
+const HeaderContent = () => {
+  const { throwDialog } = useDialog()
+
+  const handleCityClick = () => {
+    throwDialog(<RegionSelectorPopup />)
+  }
+
+  return (
+    <div className="flex mt-[1rem] z-[800] px-[0.9rem] items-end">
+      <div
+        className="h-[2.3rem] px-[1.2rem] py-[0.5rem] bg-GREEN_800 items-center flex leading-[1.313rem] tracking-[-0.025em] font-bold text-WHITE_1000 text-[1.1rem] rounded-[5rem] gap-[0.55rem] mr-[1.6rem] shadow-CARD_SHADOW"
+        onClick={handleCityClick}
+      >
+        <SettingIcon />
+        지역선택
+        <DownArrowIcon />
+      </div>
+      <div className="flex gap-[1.1rem]">
+        <Chip>전국</Chip>
+        <Chip>강남구</Chip>
+        <Chip>송파구</Chip>
+      </div>
     </div>
-    <div className="flex gap-[1.1rem]">
-      <Chip>전국</Chip>
-      <Chip>강남구</Chip>
-      <Chip>송파구</Chip>
-    </div>
-  </div>
-)
+  )
+}
 
 export default ShopHeader
