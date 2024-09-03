@@ -9,7 +9,7 @@ import Checkbox from '../atoms/Checkbox'
 
 interface PopupProps {
   id?: string
-  message: string
+  message?: string
 }
 
 const Popup = ({ id, message }: PopupProps) => {
